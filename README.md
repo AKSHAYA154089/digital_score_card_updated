@@ -6,7 +6,7 @@ This project is a Digital Score Card App built using Flutter for Clean Train Sta
 •	• Score input for cleanliness parameters (0–10)
 •	• Remarks entry for each parameter
 •	• Required field validation with * indicator
-•	• Data submission as JSON to mock API (https://httpbin.org/post)
+•	• Data submission as JSON to mock API 
 •	• Navigation to: Passed Train Score Card, Annexure A-1 Score Card, Staff & Train Consumables, Penalty Schedule (Annexure A-2)
 •	• Intuitive UI with colored action buttons
 📦 Tech Stack
@@ -14,8 +14,6 @@ This project is a Digital Score Card App built using Flutter for Clean Train Sta
 • Framework: Flutter 3.32
 • State Management: Provider
 • HTTP Requests: http package
-• Mock API: https://httpbin.org/post
-
 🚧 Folder Structure
 
 lib/
