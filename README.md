@@ -47,10 +47,10 @@ lib/
 
 📹 Submission
 
-• UI Demo: https://drive.google.com/yourname_scorecard_assignment_ui.mp4
-• Tech Walkthrough: https://drive.google.com/yourname_scorecard_assignment_tech.mp4
+• UI Demo:
+ https://drive.google.com/file/d/1o5VtDpd4UFs2KD3uszdlcs9I-DptYe_9/view?usp=drivesdk
+• Tech Walkthrough: https://drive.google.com/file/d/1DllFbczqH5WdF2Lv6o9S1sFiyogIeufG/view?usp=drivesdk
 • GitHub Repo: https://github.com/AKSHAYA154089/digital_score_card_updated
-
 🙋‍♀️ Author
 Esani Aiswarya Akshaya
 GitHub: https://github.com/AKSHAYA154089
