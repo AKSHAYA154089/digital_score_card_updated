@@ -4,6 +4,10 @@ import '../providers/form_provider.dart';
 import '../widgets/score_input.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'cts_score_grid_screen.dart';
+import 'annexure_a1_score_screen.dart';
+import 'train_consumables_screen.dart';
+import 'penalty_schedule_screen.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({super.key});
@@ -103,7 +107,9 @@ class _FormScreenState extends State<FormScreen> {
                   });
                 },
                 validator: (value) =>
-                    value == null || value.trim().isEmpty ? 'Station Name is required' : null,
+                    value == null || value.trim().isEmpty
+                        ? 'Station Name is required'
+                        : null,
               ),
               if (_stationNameError)
                 const Padding(
@@ -114,7 +120,6 @@ class _FormScreenState extends State<FormScreen> {
                   ),
                 ),
               const SizedBox(height: 20),
-
               RichText(
                 text: const TextSpan(
                   text: 'Inspection Date ',
@@ -158,13 +163,11 @@ class _FormScreenState extends State<FormScreen> {
                     style: TextStyle(color: Colors.red),
                   ),
                 ),
-
               const SizedBox(height: 20),
               ...formProvider.entries.asMap().entries.map((entry) {
                 int index = entry.key;
                 return ScoreInput(index: index);
               }),
-
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _submitForm,
@@ -173,6 +176,70 @@ class _FormScreenState extends State<FormScreen> {
                   padding: const EdgeInsets.symmetric(vertical: 14),
                 ),
                 child: const Text('Submit', style: TextStyle(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CTSScoreGridScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
+                child: const Text('Open Passed Train Score Card',
+                    style: TextStyle(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const AnnexureA1ScoreScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.teal, // ← changed from deepPurple
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
+                child: const Text('Open Annexure A-1 Score Card',
+                    style: TextStyle(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TrainConsumablesScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
+                child: const Text('Open Staff & Train Schedule',
+                    style: TextStyle(fontSize: 16)),
+              ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const PenaltyScheduleScreen()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.redAccent,
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
+                child: const Text('Open Penalty Schedule (Annexure A-2)',
+                    style: TextStyle(fontSize: 16)),
               ),
             ],
           ),
